@@ -1,23 +1,32 @@
-import { Directive, ElementRef, HostListener, Renderer, HostBinding} from '@angular/core';
+import { Directive, ElementRef, HostListener, Renderer, HostBinding, Host } from '@angular/core';
 
 @Directive({
   selector: '[appHoverImage]'
 })
 export class HoverImageDirective {
 
-  constructor(private element :ElementRef, renderer :Renderer) {
-   }
-
-   @HostBinding('style.border') border: string;
-
-   @HostListener('mouseover') onMouseEnter() {
-    this.border = "1px solid black"
-    console.log(this.border);
-    
+  constructor(private element: ElementRef, private renderer: Renderer) {
   }
 
-  @HostListener('mouseleave') onMouseLeave() {
-    this.border= null;
-  } 
+  @HostListener('mouseover') onHover() {
+    if (event.target['id'] === "image") {
+      this.hoverFocus(event['path'][0].src);
+    }
+  }
 
-}
+  hoverFocus(image) {
+    let img = this.element.nativeElement.querySelector('.hoverDiv');
+    this.renderer.setElementAttribute(img, "style", `background-image: url(${image})`);
+  }
+
+  @HostListener("mouseout") onMouseleave(){
+    if (event['fromElement']['alt'] == '' || event['fromElement']['alt'] == undefined) {
+      this.hoverBlur();
+    }
+  }
+
+  hoverBlur(){
+    let img = this.element.nativeElement.querySelector('.hoverDiv');
+    this.renderer.setElementAttribute(img, "style", `display : none`);
+  }
+ }

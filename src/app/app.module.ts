@@ -5,12 +5,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { GalleryComponent } from './components/gallery/gallery.component';
 import { HoverImageDirective } from './hover-image.directive';
+import { LightBoxDirective } from './components/gallery/light-box.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
     GalleryComponent,
-    HoverImageDirective
+    HoverImageDirective,
+    LightBoxDirective
   ],
   imports: [
     BrowserModule,
