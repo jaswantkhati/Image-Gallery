@@ -1,0 +1,139 @@
+<nav>
+    <h1>IMAGE GALLERY</h1>
+</nav>
+<div class="container" appHoverImage>
+    <div class="row">
+        <div class="col-md-4">
+            <div class="thumbnail">
+                <img class="img" src="/assets/images/amanita-muscaria-fly-agaric-fungus-259660.jpg" alt="Lights" id="image" (click)="openModal();currentSlide(1)">
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="thumbnail">
+                <img class="img" src="/assets/images/animal-animal-photography-blur-572861.jpg" alt="Nature" id="image" (click)="openModal();currentSlide(2)">
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="thumbnail">
+                <img class="img" src="/assets/images/animal-animal-photography-canidae-45242.jpg" alt="Fjords" id="image" (click)="openModal();currentSlide(3)">
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4">
+            <div class="thumbnail">
+                <img class="img" src="/assets/images/animal-animal-photography-daylight-36762.jpg" alt="Lights" id="image" (click)="openModal();currentSlide(4)">
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="thumbnail">
+                <img class="img" src="/assets/images/animal-antler-antlers-219906.jpg" alt="Nature" id="image" (click)="openModal();currentSlide(5)">
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="thumbnail">
+                <img class="img" src="/assets/images/art-asian-buffalo-46152.jpg" alt="Fjords" id="image" (click)="openModal();currentSlide(6)">
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4">
+            <div class="thumbnail">
+                <img class="img" src="/assets/images/art-ball-blur-235615.jpg" alt="Lights" id="image" (click)="openModal();currentSlide(7)">
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="thumbnail">
+                <img class="img" src="/assets/images/beautiful-blur-close-up-259707.jpg" alt="Nature" id="image" (click)="openModal();currentSlide(8)">
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="thumbnail">
+                <img class="img" src="/assets/images/bridge-daylight-environment-775201.jpg" alt="Fjords" id="image" (click)="openModal();currentSlide(9)">
+            </div>
+        </div>
+    </div>
+    <div class="hoverDiv">
+    </div>
+</div>
+<div id="myModal" class="modal" appLightBox>
+    <span class="close cursor" (click)="closeModal()">&times;</span>
+    <div class="modal-content">
+        <div class="mySlides">
+            <div class="numbertext">1 / 9</div>
+            <img src="/assets/images/amanita-muscaria-fly-agaric-fungus-259660.jpg" class="sliderImage">
+        </div>
+        <div class="mySlides">
+            <div class="numbertext">2 / 9</div>
+            <img src="/assets/images/animal-animal-photography-blur-572861.jpg" class="sliderImage">
+        </div>
+        <div class="mySlides">
+            <div class="numbertext">3 / 9</div>
+            <img src="/assets/images/animal-animal-photography-canidae-45242.jpg" class="sliderImage">
+        </div>
+        <div class="mySlides">
+            <div class="numbertext">4 / 9</div>
+            <img src="/assets/images/animal-animal-photography-daylight-36762.jpg" class="sliderImage">
+        </div>
+        <div class="mySlides">
+            <div class="numbertext">5 / 9</div>
+            <img src="/assets/images/animal-antler-antlers-219906.jpg" class="sliderImage">
+        </div>
+        <div class="mySlides">
+            <div class="numbertext">6 / 9</div>
+            <img src="/assets/images/art-asian-buffalo-46152.jpg" class="sliderImage ">
+        </div>
+        <div class="mySlides ">
+            <div class="numbertext ">7 / 9</div>
+            <img src="/assets/images/art-ball-blur-235615.jpg " class="sliderImage ">
+        </div>
+        <div class="mySlides ">
+            <div class="numbertext ">8 / 9</div>
+            <img src="/assets/images/beautiful-blur-close-up-259707.jpg " class="sliderImage ">
+        </div>
+        <div class="mySlides ">
+            <div class="numbertext ">9 / 9</div>
+            <img src="/assets/images/bridge-daylight-environment-775201.jpg " class="sliderImage ">
+        </div>
+
+        <!-- Next/previous controls -->
+        <a class="prev " (click)="plusSlides(-1) ">&#10094;</a>
+        <a class="next " (click)="plusSlides(1) ">&#10095;</a>
+
+        <!-- Caption text -->
+        <div class="caption-container ">
+            <p id="caption "></p>
+        </div>
+
+        <!-- Thumbnail image controls -->
+        <div class="wrap ">
+            <div class="column ">
+                <img class="demo " src="/assets/images/amanita-muscaria-fly-agaric-fungus-259660.jpg " (click)="currentSlide(1)" id="1" alt="Nature ">
+            </div>
+            <div class="column ">
+                <img class="demo " src="/assets/images/animal-animal-photography-blur-572861.jpg " (click)="currentSlide(2) " alt="Snow ">
+            </div>
+            <div class="column ">
+                <img class="demo " src="/assets/images/animal-animal-photography-canidae-45242.jpg " (click)="currentSlide(3) " alt="Mountains ">
+            </div>
+            <div class="column ">
+                <img class="demo " src="/assets/images/animal-animal-photography-daylight-36762.jpg " (click)="currentSlide(4) " alt="Lights ">
+            </div>
+            <div class="column ">
+                <img class="demo " src="/assets/images/animal-antler-antlers-219906.jpg " (click)="currentSlide(5) " alt="Lights ">
+            </div>
+            <div class="column ">
+                <img class="demo " src="/assets/images/art-asian-buffalo-46152.jpg " (click)="currentSlide(6) " alt="Lights ">
+            </div>
+            <div class="column ">
+                <img class="demo " src="/assets/images/art-ball-blur-235615.jpg " (click)="currentSlide(7) " alt="Lights ">
+            </div>
+            <div class="column ">
+                <img class="demo " src="/assets/images/beautiful-blur-close-up-259707.jpg " (click)="currentSlide(8) " alt="Lights ">
+            </div>
+            <div class="column ">
+                <img class="demo " src="/assets/images/bridge-daylight-environment-775201.jpg " (click)="currentSlide(9) " alt="Lights ">
+            </div>
+        </div>
+    </div>
+</div>
